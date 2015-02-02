@@ -5,7 +5,7 @@ module Machinist
     def split_entropy(params)
       split_sets = data.group_by { |datum| datum[params[:split_label]] }
       split_sets.values.inject(0) do |sum, split_set|
-        sum + entropy_of(split_set, params[:class_label])
+        sum + (split_set.size / data.size.to_f) * entropy_of(split_set, params[:class_label])
       end
     end
 
