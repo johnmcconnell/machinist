@@ -6,7 +6,7 @@ describe Machinist::EntropyCalculator do
       [:color, :weight, :size],
       [:green, 10, 5],
       [:blue, 3, 6],
-      [:red, 5, 1]
+      [:red, 12, 5]
     ]
   end
 
