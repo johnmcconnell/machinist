@@ -35,4 +35,12 @@ describe Machinist::EntropyCalculator do
       ).to be_within(a_thousandth).of 0.66667
     end
   end
+
+  describe '#information_gain' do
+    it 'returns the information gained from splitting on label' do
+      expect(
+        subject.information_gain(split_label: :size, class_label: :color)
+      ).to be_within(a_thousandth).of (1.58496 - 0.66667)
+    end
+  end
 end

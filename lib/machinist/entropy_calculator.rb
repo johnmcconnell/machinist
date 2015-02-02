@@ -13,6 +13,10 @@ module Machinist
       entropy_of(data, params[:class_label])
     end
 
+    def information_gain(params)
+      entropy(params) - split_entropy(params)
+    end
+
     protected
 
     def probability(x, y)
