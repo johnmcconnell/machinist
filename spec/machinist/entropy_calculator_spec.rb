@@ -30,7 +30,9 @@ describe Machinist::EntropyCalculator do
 
   describe '#split_entropy' do
     it 'returns entropy after parameterizing by split label' do
-      expect(subject.split_entropy(split_label: :size, class_label: :color)).to eq 0
+      expect(
+        subject.split_entropy(split_label: :size, class_label: :color)
+      ).to be_within(a_thousandth).of 0.66667
     end
   end
 end
