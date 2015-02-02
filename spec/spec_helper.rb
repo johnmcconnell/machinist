@@ -1,5 +1,6 @@
 require 'machinist'
 require 'coveralls'
+require 'pry'
 
 Coveralls.wear!
 
